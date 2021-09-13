@@ -88,3 +88,9 @@ window.addEventListener("keydown", (e) => {
     clickArrowLeft();
   }
 });
+
+ // зачищаем слушателя событий 
+if (!divLightboxRef.classList.contains("is-open")) {
+  window.removeEventListener("keyup", escapeClick);
+  window.removeEventListener("click", closeModalClick);
+}
